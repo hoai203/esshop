@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <title>Watcher</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../src/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../src/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../src/css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="./index.html">
+            <span>
+              Watcher
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> About </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./watch.html"> Our Watches </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact us</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+  </div>
+  <div class="container mb-5 pb-3">
+    <div class="row">
+      <!-- Content-->
+      <section class="col-lg-8 pt-2 pt-lg-4 pb-4 mb-3">
+        <div class="pt-2 px-4 pe-lg-0 ps-xl-5">
+          <!-- Title-->
+          <h4 class="border-bottom pb-3 mb-3">Thông Tin Khách Hàng</h4>
+          <div>
+            <!-- Billing detail-->
+            <div class="row pb-4 gx-4 gy-3">
+              <input type="hidden" id="idOrder">
+              <div class="col-sm-6">
+                <label class="form-label" for="mc-fn">Họ Và Tên <span class="text-danger">*</span></label>
+                <input class="form-control" type="text" name="name" id="name" placeholder="Tên" />
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label" for="mc-ln">Số Điện Thoại <span class="text-danger">*</span></label>
+                <input class="form-control" type="text" name="phone" id="phone" />
+              </div>
+              <div class="col-12 mt-2">
+                <label class="form-label" for="mc-email">Địa Chỉ Email <span class="text-danger">*</span></label>
+                <input class="form-control" type="email" name="email" id="email" />
+              </div>
+              <div class="col-12 mt-2">
+                <label class="form-label" for="mc-email">Địa Chỉ <span class="text-danger">*</span></label>
+                <input class="form-control" type="text" placeholder="Tên đường, Tòa nhà, Số nhà" name="address"
+                  id="address" />
+              </div>
+              <div class="col-12 mt-2">
+                <label class="form-label" for="mc-email">Ghi Chú Nếu Bạn Cần
+                  <span class="text-danger">*</span></label>
+                <textarea cols="30" rows="7" class="form-control" name="note" id="note"></textarea>
+              </div>
+            </div>
+            <button class="btn btn-success" id="addOrder">Thanh Toán</button>
+          </div>
+        </div>
+      </section>
+      <!-- Sidebar-->
+      <aside class="col-lg-4 d-none d-lg-block ps-xl-5">
+        <hr class="d-lg-none" />
+        <div class="p-4 h-100 ms-auto border-start">
+          <div class="widget px-lg-2 py-2 mb-3">
+            <h4 class="widget-title text-center">Thông Tin Đơn Hàng</h4>
+            <!-- Item-->
+            <div class="listCart"></div>
+
+            <h4 class="fw-normal text-center pt-3 text-danger" id="totalPrice">
+
+            </h4>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script type="module" src="../services/Order.js"></script>
+  <script type="module" src="../src/js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
